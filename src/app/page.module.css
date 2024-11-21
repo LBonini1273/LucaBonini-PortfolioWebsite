@@ -144,7 +144,7 @@
 
 .canv{
   width: 100%;
-  aspect-ratio: 10 / 2;
+  height: 40vw;
 }
 
 .tvback{
