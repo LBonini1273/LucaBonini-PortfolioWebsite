@@ -57,7 +57,7 @@ function TVSet() {
       <ambientLight intensity={0.8} />
       <pointLight intensity={1} position={[0, 6, 0]} />
       <Html position={[2, 6.1, 2]}>
-      <div className={styles.consolelogo}>ProjBox</div>
+        <div className={styles.consolelogo}>ProjBox</div>
       </Html>
       <Shelf />
       <Eject onShow={handleClick} />
@@ -89,7 +89,7 @@ function TVSet() {
       <ambientLight intensity={0.8} />
       <pointLight intensity={1} position={[0, 6, 0]} />
       <Html position={[2, 6.1, 2]}>
-      <div className={styles.consolelogo}>ProjBox</div>
+        <div className={styles.consolelogo}>ProjBox</div>
       </Html>
       <Shelf />
       <Eject onShow={handleClick} />
@@ -121,7 +121,7 @@ function TVSet() {
       <ambientLight intensity={0.8} />
       <pointLight intensity={1} position={[0, 6, 0]} />
       <Html position={[2, 6.1, 2]}>
-      <div className={styles.consolelogo}>ProjBox</div>
+        <div className={styles.consolelogo}>ProjBox</div>
       </Html>
       <Shelf />
       <Eject onShow={handleClick} />
