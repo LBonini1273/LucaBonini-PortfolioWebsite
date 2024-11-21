@@ -60,6 +60,8 @@ function CDText({x, y, z, activenum}:{x: number, y: number, z: number, activenum
     )
 }
 
+
+
 //This is the full CD plus the text from the previous function. It also controls the movement of the CD
 export function CDR({onShow, x, y, z, active, activenum}: { onShow: () => void, x: number, y: number, z: number, active: boolean, activenum: number}) {
     const { nodes, materials } = useGLTF('/very_simple_cd-_disc.glb')
@@ -68,15 +70,22 @@ export function CDR({onShow, x, y, z, active, activenum}: { onShow: () => void, 
     useEffect(() => void (document.body.style.cursor = hovered && !active ? "pointer" : "auto"), [hovered, active])
     const onPointerOver = () => setHover(true);
     const onPointerOut = () => setHover(false);
-  
+
+    const variants = {
+        slide: { x: x+2.5, y: y, z: z },
+        in: {x: -6.25, y: 5, z: z, rotateX: Math.PI/-2},
+        out: {x: x, y: y, z: z, rotateX: 0}   
+    }
+
     return (
       <group dispose={null}>
           <CDText x={x} y={y} z={z} activenum={activenum} />
-          <motion.mesh animate={[!active && hovered ? { x: x+2.5, y: y, z: z } : active ? {x: -6.25, y: 5, z: z} : {x: x, y: y, z: z}, active ? {rotateX: Math.PI/-2} : {rotateX: 0}]}
+          <motion.mesh variants={variants} animate={!active && hovered ? "slide" : active ? "in" : "out"}
             transition={{ type:"spring", bounce: 0.05 }}
             scale={2} onClick={onShow} onPointerOver={onPointerOver} onPointerOut={onPointerOut} position={[x, y, z]}
               castShadow
               receiveShadow
+              //@ts-expect-error TS is dumb
               geometry={nodes.Object_2.geometry}
               material={materials.None}  
           />
