@@ -142,9 +142,17 @@
   margin-bottom: 200px;
 }
 
+.canvbox{
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: repeat(1, 40vh);
+}
+
 .canv{
+  grid-column: 1 / 2;
+  grid-row: 1 / 11;
   width: 100%;
-  height: 40vw;
+  height: 100%;
 }
 
 .tvback{

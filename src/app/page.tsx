@@ -139,20 +139,22 @@ function TVSet() {
     <div id='tvback' className={styles.tvback}>
       <h1></h1>
     </div>
-    <div className={styles.canv}>
-    <Canvas> 
-    <OrthographicCamera makeDefault position={[0, 0, 9]} zoom={27.3} /> 
-    <ambientLight intensity={0.8} />
-    <pointLight intensity={1} position={[0, 6, 0]} />
-    <Html position={[2, 6.1, 2]}>
-      <div className={styles.consolelogo}>ProjBox</div>
-    </Html>
-    <Shelf />
-    <Eject onShow={handleClick} />
-    <CDR onShow={() => setActiveProj(1)} x={-11.4} y={-2.5} z={4} active={p1Active} activenum={1}/>
-    <CDR onShow={() => setActiveProj(2)} x={0.6} y={-2.5} z={4} active={p2Active} activenum={2}/>
-    <CDR onShow={() => setActiveProj(3)} x={12.6} y={-2.5} z={4} active={p3Active} activenum={2}/> 
-    </Canvas>
+    <div className={styles.canvbox}>
+      <div className={styles.canv}>
+        <Canvas> 
+        <OrthographicCamera makeDefault position={[0, 0, 9]} zoom={27.3} /> 
+        <ambientLight intensity={0.8} />
+        <pointLight intensity={1} position={[0, 6, 0]} />
+        <Html position={[2, 6.1, 2]}>
+          <div className={styles.consolelogo}>ProjBox</div>
+        </Html>
+        <Shelf />
+        <Eject onShow={handleClick} />
+        <CDR onShow={() => setActiveProj(1)} x={-11.4} y={-2.5} z={4} active={p1Active} activenum={1}/>
+        <CDR onShow={() => setActiveProj(2)} x={0.6} y={-2.5} z={4} active={p2Active} activenum={2}/>
+        <CDR onShow={() => setActiveProj(3)} x={12.6} y={-2.5} z={4} active={p3Active} activenum={2}/> 
+        </Canvas>
+      </div>
     </div>
     </div>
   )    
