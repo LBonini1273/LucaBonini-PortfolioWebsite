@@ -424,3 +424,8 @@
   grid-column: 10 / 12;
   grid-row: 1 / 9;
 }
+
+.hazard{
+  grid-column: 10 / 12;
+  grid-row: 5 / 8;  
+}

@@ -22,6 +22,8 @@ export default function Links() {
                 </div>
                 <Image width={200} height={200} className={`${styles.portbuttonstand} ${styles.fill}`} src="/portalbutton.png" alt="" />
 
+                <Image width={200} height={200} className={`${styles.hazard} ${styles.fill}`} src="/hazard.jpg" alt="" />
+
                 <motion.img initial={{ y: -6}} className={styles.p1L} src="/orgportalL.png" alt="" />
                 <motion.img initial={{ y: -6}} className={styles.p1R} src="/orgportalR.png" alt="" />
 

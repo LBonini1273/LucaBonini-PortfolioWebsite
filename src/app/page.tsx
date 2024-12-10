@@ -143,7 +143,9 @@ function TVSet() {
   return (
     <div className={styles.tvset}>
       <div id='tvback' className={styles.tvback}>
-        <h1></h1>
+        <h1>
+          <p className={styles.tempcopy}>Please insert a disc to play.</p>
+        </h1>
       </div>
       <div className={styles.canvbox}>
         <div className={styles.canv}>
