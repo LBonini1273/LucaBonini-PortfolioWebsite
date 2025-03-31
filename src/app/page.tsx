@@ -41,7 +41,7 @@ function TVSet() {
           <h1>
             <div className={styles.projcopy}>
               <p className={styles.projtext}>I understand how contentious it can be to list one&apos;s portfolio website as a project, but that is exactly why I did my best to create something from scratch that was uniquely my own.</p>
-              <p className={styles.projtext}>I designed the layout myself and used HTML, CSS, React, and Three to create the frontend. I then used Next.js for the backend and Vercel to host the website. 
+              <p className={styles.projtext}>I designed the layout myself and used HTML, CSS, React, and Three.js to create the frontend. I then used Next.js for the backend and Vercel to host the website. 
               I also used libraries such as React Three Fiber, Drei, and Motion for React to add additional features such as the animations.</p>
               <p className={styles.projtext}>Not only was this an opportunity for me to refine my exsisting knowledge, but I was also able to learn a lot of new things in the process.
               Be sure to checkout my GitHub repo to see how it evolves over time.</p> 
@@ -144,7 +144,7 @@ function TVSet() {
     <div className={styles.tvset}>
       <div id='tvback' className={styles.tvback}>
         <h1>
-          <p className={styles.tempcopy}>Please insert a disc to play.</p>
+          <p className={styles.tempcopy}>Please insert one of the discs below.</p>
         </h1>
       </div>
       <div className={styles.canvbox}>

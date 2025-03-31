@@ -6,17 +6,17 @@ export default function Nav() {
         <nav>
             <motion.div id="about" className={styles.about} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{delay:7.5, duration:0.25}}>
                 <a href="#">
-                    <p>About Me</p>
+                    About Me
                 </a>
             </motion.div>
             <motion.div id="proj" className={styles.proj} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{delay:8, duration:0.25}}>
                 <a href="#tvback">
-                    <p>Projects</p>
+                    Projects
                 </a>
             </motion.div>
             <motion.div id="links" className={styles.links} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{delay:8.5, duration:0.25}}>
                 <a href="#linksection">
-                    <p>Links</p>
+                    Links
                 </a>
             </motion.div>
         </nav>
