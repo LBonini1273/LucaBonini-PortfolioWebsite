@@ -1,3 +1,4 @@
+/*Navbar*/
 .about{
   grid-row: 1 / 5;
   grid-column: 4 / 7;
@@ -46,124 +47,235 @@
   border-radius: 30px;
 }
 
-.lJoycon{
-  grid-column: 2 / 3;
-  grid-row: 3 / 11;
-  background-color: #0028d8;
-  border-top-left-radius: 100%;
-  border-bottom-left-radius: 100%;
+/*About*/
+
+@media (max-width:1024px){
+  .screen{
+    display: none;
+  }
+  .lJoycon{
+    display: none;
+  }
+  .rJoycon{
+    display: none;
+  }
+
+  .gboyscreen{
+    position: relative;
+    grid-column: 1 / 10;
+    grid-row: 1 / 5;
+    background-color: rgb(75, 105, 41);
+    border: grey solid 10px;
+    border-radius: 5px 5px 50px 5px;  
+  }
+
+  .gboybuttons{
+
+  }
+
+  .aboutcopy{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: clamp(14px, 0.2vw, 2.5vw);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .me{
+    width: 25%;
+    height: 25%;
+    float: left;
+  }
 }
 
-.screen{
-  grid-column: 3 / 9;
-  grid-row: 3 / 11;
-  background-color: rgb(24, 24, 24);
-  border-left: 4vw solid;
-  border-right: 4vw solid;
-  border-top: 2vw solid;
-  border-bottom: 2vw solid; 
-  border-color: black; 
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(13, 1fr);
-  overflow: hidden;
+@media (min-width:1024px){
+  .lJoycon{
+    grid-column: 2 / 3;
+    grid-row: 3 / 11;
+    background-color: #0028d8;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+  }
+  
+  .screen{
+    grid-column: 3 / 9;
+    grid-row: 3 / 11;
+    background-color: rgb(24, 24, 24);
+    border-left: 4vw solid;
+    border-right: 4vw solid;
+    border-top: 2vw solid;
+    border-bottom: 2vw solid; 
+    border-color: black; 
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    overflow: hidden;
+  }
+  
+  .picdiv{
+    grid-column: 2 / 5;
+    grid-row: 3 / 8;
+    border-top: #0028d8 solid 0.3vw;
+    border-bottom: #0028d8 solid 0.3vw;
+    padding-top: 0.6vw;
+    padding-bottom: 0.6vw;
+  }
+  
+  .me{
+    display: inherit;
+    height: 100%;
+    width: 70%;
+    position: relative;
+    right: 15%;
+    left: 15%;    
+  }
+  
+  .aboutcopy{
+    grid-column: 6 / 10;
+    grid-row: 1 / 14;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    border-left: rgba(255, 0, 0, 0) solid 0.3vw;
+    border-right: rgba(255, 0, 0, 0) solid 0.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    height: 100%;
+  }
+  
+  .abouttext{
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    margin: 0.3vw;
+  }
+  
+  .barbox{
+    grid-column: 6 / 10;
+    grid-row: 1 / 14;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .lredbar{
+    width: 0.3vw;
+    height: 350px;
+    background-color: #d80000;
+  }
+  
+  .rredbar{
+    width: 0.3vw;
+    height: 350px;
+    background-color: #d80000;
+  }
+  
+  .rJoycon{
+    grid-column: 9 / 10;
+    grid-row: 3 / 11;
+    background-color: #d80000;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+  }
 }
 
-.picdiv{
-  grid-column: 2 / 5;
-  grid-row: 3 / 8;
-  border-top: #0028d8 solid 0.3vw;
-  border-bottom: #0028d8 solid 0.3vw;
-  padding-top: 0.6vw;
-  padding-bottom: 0.6vw;
-}
+/*Projects*/
+  .tvset{
+    border-top: 50px transparent solid;
+    margin-bottom: 100px;
+    position: relative;
+  }
+  
+  .tvback{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #964b00;
+    width: clamp(300px, 40vw, 40vw);
+    height: clamp(183.75px, 24.5vw, 24.5vw); 
+    padding: clamp(7.5px, 1vw, 1vw);
+    border-radius: 5%;
+    border-top: clamp(18.75px, 2.5vw, 2.5vw) solid transparent;
+  }
 
-.me{
-  height: 100%;
-  width: 70%;
-  position: relative;
-  right: 15%;
-  left: 15%;    
-}
+  .projbox{
+    width: clamp(300px, 40vw, 40vw);
+    height: clamp(60px ,8vw, 8vw);
+    margin-left: auto;
+    margin-right: auto;  
+  }
+  
+  .projectshelf{
+    margin-left: auto;
+    margin-right: auto;
+    width: clamp(220.5px, 29.4vw, 29.4vw);
+    height: clamp(270.75px, 36.1vw, 36.1vw);
+    background-color: #311900;
+    border-radius: 5%;
+    display: flex;
+    gap: 0.5vw;
+    border: #663300 solid 0.5vw;
+  }
 
-.aboutcopy{
-  grid-column: 6 / 10;
-  grid-row: 1 / 14;
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-  border-left: rgba(255, 0, 0, 0) solid 0.3vw;
-  border-right: rgba(255, 0, 0, 0) solid 0.3vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: auto;
-  height: 100%;
-}
+  .projboxlogo{
+    color: #8e0002;
+    text-align: center;
+    font-size: clamp(23px, 3vw, 3vw);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    cursor: default;  
+  }
 
-.abouttext{
-  padding-left: 0.3vw;
-  padding-right: 0.3vw;
-  margin: 0.3vw;
-}
+  @media (min-width:1024px){
+    .tvset{
+      border-top: 150px transparent solid;
+      margin-bottom: 200px;
+      position: relative;
+    }
 
-.barbox{
-  grid-column: 6 / 10;
-  grid-row: 1 / 14;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .tvback{
+      margin-left: 12.5%;
+      background-color: #964b00;
+      width: clamp(300px, 40vw, 40vw);
+      height: clamp(183.75px, 24.5vw, 24.5vw); 
+      padding: clamp(7.5px, 1vw, 1vw);
+      border-radius: 5%;
+      border-top: clamp(18.75px, 2.5vw, 2.5vw) solid transparent;
+    }
 
-.lredbar{
-  width: 0.3vw;
-  height: 350px;
-  background-color: #d80000;
-}
+    .projbox{
+      width: clamp(300px, 40vw, 40vw);
+      height: clamp(60px ,8vw, 8vw);
+      margin-left: 13.5%;   
+    }
+    
+    .projectshelf{
+      position: absolute;
+      top: 0;
+      left: clamp(408px, 54.4vw , 54.4vw);
+      width: clamp(220.5px, 29.4vw, 29.4vw);
+      height: clamp(270.75px, 36.1vw, 36.1vw);
+      background-color: #311900;
+      border-radius: 5%;
+      display: flex;
+      gap: 0.5vw;
+      border: #663300 solid 0.5vw;
+    }
+  }
 
-.rredbar{
-  width: 0.3vw;
-  height: 350px;
-  background-color: #d80000;
-}
-
-.rJoycon{
-  grid-column: 9 / 10;
-  grid-row: 3 / 11;
-  background-color: #d80000;
-  border-top-right-radius: 100%;
-  border-bottom-right-radius: 100%;
-}
-
-.tvset{
-  margin-bottom: 200px;
-}
-
-.canvbox{
-  display: grid;
-  grid-template-columns: repeat(1, 100%);
-  grid-template-rows: repeat(1, 40vh);
-}
-
-.canv{
-  grid-column: 1 / 2;
-  grid-row: 1 / 11;
-  width: 100%;
-  height: 100%;
-}
-
-.tvback{
-  background-color: #964b00;
-  width: 39vw;
-  height: 24.5vw;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1vw;
-  border-radius: 5%;
-  border-top: 2.5vw solid transparent;
+.ejectsvg{
+  position: absolute;
+  top: 82vw;
+  right: 32%;
+  z-index: 1;
 }
 
 .projcopy{
@@ -302,6 +414,7 @@
   cursor: default;
 }
 
+/*Links*/
 .linksection{
   display: grid;
   grid-template-columns: repeat(1, 1fr);

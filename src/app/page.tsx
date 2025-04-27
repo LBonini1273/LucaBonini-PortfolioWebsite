@@ -141,28 +141,30 @@ function TVSet() {
   }
 
   return (
-    <div className={styles.tvset}>
-      <div id='tvback' className={styles.tvback}>
-        <h1>
-          <p className={styles.tempcopy}>Please insert a disc to play.</p>
-        </h1>
-      </div>
-      <div className={styles.canvbox}>
-        <div className={styles.canv}>
-          <Canvas> 
-          <OrthographicCamera makeDefault position={[0, 0, 9]} zoom={27.3} /> 
-          <ambientLight intensity={0.8} />
-          <pointLight intensity={1} position={[0, 6, 0]} />
-          <Html position={[2, 6.1, 2]}>
-            <div className={styles.consolelogo}>ProjBox</div>
-          </Html>
-          <Shelf />
-          <Eject onShow={handleClick} />
-          <CDR onShow={() => setActiveProj(1)} x={-11.4} y={-2.5} z={4} active={p1Active} activenum={1}/>
-          <CDR onShow={() => setActiveProj(2)} x={0.6} y={-2.5} z={4} active={p2Active} activenum={2}/>
-          <CDR onShow={() => setActiveProj(3)} x={12.6} y={-2.5} z={4} active={p3Active} activenum={2}/> 
-          </Canvas>
+    <div id='projects' className={styles.tvset}>
+      
+        <div className={styles.tvback}>
+          <h1>
+            <p className={styles.tempcopy}>Please insert one of the adjacent discs to play.</p>
+          </h1>
         </div>
+        <div className={styles.projbox}>
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%"/>
+            <rect y="30%" width="50%" height="12.5%" fill="#8e0002"/>
+            <rect y="75%" width="100%" height="25%" fill="#434344"/>
+            <text x="57.5%" y="47.5%" fill="#8e0002" className={styles.projboxlogo}>ProjBox</text>
+            <circle cx="89%" cy="35%" r="4.5%" fill="#434344"/>
+            <svg viewBox="0 0 100 100">
+              <polygon points="245,25 238,35 252,35" fill="#8e0002"/>  
+            </svg>
+            <rect x="87.6%" y="37%" width="2.75%" height="5%" fill="#8e0002"/>
+            <circle cx="89%" cy="35%" r="4.5%" fill="transparent"/>   
+          </svg>
+        </div>
+      
+      <div className={styles.projectshelf}>
+
       </div>
     </div>
   )    

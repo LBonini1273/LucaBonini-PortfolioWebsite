@@ -10,7 +10,7 @@ export default function Nav() {
                 </a>
             </motion.div>
             <motion.div id="proj" className={styles.proj} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{delay:8, duration:0.25}}>
-                <a href="#tvback">
+                <a href="#projects">
                     <p>Projects</p>
                 </a>
             </motion.div>
