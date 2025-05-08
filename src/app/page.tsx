@@ -3,16 +3,9 @@
 import Image from "next/image";
 import styles from '@/app/page.module.css'
 import { useState } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { useGLTF, OrthographicCamera, Html } from '@react-three/drei'
 import Nav from '@/app/ui/Nav';
 import Links from '@/app/ui/Links';
 import Header from '@/app/ui/Header';
-import { CDR } from '@/app/ui/Cd';
-import Eject from '@/app/ui/Eject';
-import Shelf from "@/app/ui/Shelf";
-
-useGLTF.preload('/very_simple_cd-_disc.glb')
 
 //Booleans for Controlling which CD is active
 let p1Active = false;
@@ -53,19 +46,6 @@ function TVSet() {
         </div>
         <div className={styles.canvbox}> 
           <div className={styles.canv}>
-            <Canvas>
-            <OrthographicCamera makeDefault position={[0, 0, 9]} zoom={27.3} /> 
-            <ambientLight intensity={0.8} />
-            <pointLight intensity={1} position={[0, 6, 0]} />
-            <Html position={[2, 6.1, 2]}>
-              <div className={styles.consolelogo}>ProjBox</div>
-            </Html>
-            <Shelf />
-            <Eject onShow={handleClick} />
-            <CDR onShow={() => setActiveProj(1)} x={-11.4} y={-2.5} z={4} active={p1Active} activenum={1}/>
-            <CDR onShow={() => setActiveProj(2)} x={0.6} y={-2.5} z={4} active={p2Active} activenum={2}/>
-            <CDR onShow={() => setActiveProj(3)} x={12.6} y={-2.5} z={4} active={p3Active} activenum={2}/> 
-            </Canvas>
           </div>
         </div> 
       </div>
@@ -87,19 +67,6 @@ function TVSet() {
         </div>
         <div className={styles.canvbox}> 
           <div className={styles.canv}>
-            <Canvas>
-            <OrthographicCamera makeDefault position={[0, 0, 9]} zoom={27.3} />
-            <ambientLight intensity={0.8} />
-            <pointLight intensity={1} position={[0, 6, 0]} />
-            <Html position={[2, 6.1, 2]}>
-              <div className={styles.consolelogo}>ProjBox</div>
-            </Html>
-            <Shelf />
-            <Eject onShow={handleClick} />
-            <CDR onShow={() => setActiveProj(1)} x={-11.4} y={-2.5} z={4} active={p1Active} activenum={1}/>
-            <CDR onShow={() => setActiveProj(2)} x={0.6} y={-2.5} z={4} active={p2Active} activenum={2}/>
-            <CDR onShow={() => setActiveProj(3)} x={12.6} y={-2.5} z={4} active={p3Active} activenum={2}/>    
-            </Canvas>
           </div>
         </div> 
       </div>
@@ -121,19 +88,6 @@ function TVSet() {
         </div>
         <div className={styles.canvbox}> 
           <div className={styles.canv}>
-            <Canvas>
-            <OrthographicCamera makeDefault position={[0, 0, 9]} zoom={27.3} />
-            <ambientLight intensity={0.8} />
-            <pointLight intensity={1} position={[0, 6, 0]} />
-            <Html position={[2, 6.1, 2]}>
-              <div className={styles.consolelogo}>ProjBox</div>
-            </Html>
-            <Shelf />
-            <Eject onShow={handleClick} />
-            <CDR onShow={() => setActiveProj(1)} x={-11.4} y={-2.5} z={4} active={p1Active} activenum={1}/>
-            <CDR onShow={() => setActiveProj(2)} x={0.6} y={-2.5} z={4} active={p2Active} activenum={2}/>
-            <CDR onShow={() => setActiveProj(3)} x={12.6} y={-2.5} z={4} active={p3Active} activenum={2}/>      
-            </Canvas>
           </div>
         </div>
       </div>
