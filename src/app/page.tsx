@@ -36,7 +36,7 @@ function TVSet() {
     )
   }
   
-  if (activeProj == 1) {
+  if (activeProj == 2) {
     
     return (
       <div className={styles.tvset}>
@@ -54,7 +54,7 @@ function TVSet() {
     )
   }
 
-  if (activeProj == 1) {
+  if (activeProj == 3) {
     
     return (
       <div className={styles.tvset}>
@@ -80,7 +80,7 @@ function TVSet() {
             <p className={styles.tempcopy}>Please insert one of the adjacent discs to play.</p>
           </h1>
         </div>
-        <div className={styles.projbox}>
+        <div className={styles.projbox} onClick={() => activeProj = 1}>
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <rect width="100%" height="100%"/>
             <rect y="30%" width="50%" height="12.5%" fill="#8e0002"/>
