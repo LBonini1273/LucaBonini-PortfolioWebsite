@@ -2,24 +2,15 @@
 
 import Image from "next/image";
 import styles from '@/app/page.module.css'
-import { useState } from 'react'
 import Nav from '@/app/ui/Nav';
 import Links from '@/app/ui/Links';
 import Header from '@/app/ui/Header';
 
-//Booleans for Controlling which CD is active
-let p1Active = false;
-let p2Active = false;
-let p3Active = false;
-
 //Function that creates and controls what content is shown on the TV based on the active CD
 function TVSet() {
-  const activeProj = 0;
+  let activeProj = 0;
 
-  if (p1Active = true) {
-    p1Active = true;
-    p2Active = false;
-    p3Active = false;
+  if (activeProj == 1) {
 
     return (
       <div className={styles.tvset}>
@@ -45,10 +36,7 @@ function TVSet() {
     )
   }
   
-  if (p2Active = true) {
-    p1Active = false;
-    p2Active = true;
-    p3Active = false;
+  if (activeProj == 1) {
     
     return (
       <div className={styles.tvset}>
@@ -66,10 +54,7 @@ function TVSet() {
     )
   }
 
-  if (p3Active = true) {
-    p1Active = false;
-    p2Active = false;
-    p3Active = true;
+  if (activeProj == 1) {
     
     return (
       <div className={styles.tvset}>
