@@ -10,7 +10,7 @@ export default function Header() {
             </div>
             <div className={styles.screen}>
                 <div className={styles.picdiv}>
-                    <img className={styles.me} src="/OnlygoodpicIhaveedit.jpg" alt=""/>
+                    <Image width={200} height={200} className={styles.me} src="/OnlygoodpicIhaveedit.jpg" alt=""/>
                 </div>
                 
                 <div className={styles.aboutcopy} tabIndex={0}>

@@ -14,16 +14,9 @@ let p3Active = false;
 
 //Function that creates and controls what content is shown on the TV based on the active CD
 function TVSet() {
-  const [activeProj, setActiveProj] = useState(0);
+  const activeProj = 0;
 
-  const handleClick = () => {
-    setActiveProj(0);
-    p1Active = false;
-    p2Active = false;
-    p3Active = false;
-  };
-
-  if (activeProj === 1) {
+  if (p1Active = true) {
     p1Active = true;
     p2Active = false;
     p3Active = false;
@@ -52,7 +45,7 @@ function TVSet() {
     )
   }
   
-  if (activeProj === 2) {
+  if (p2Active = true) {
     p1Active = false;
     p2Active = true;
     p3Active = false;
@@ -73,7 +66,7 @@ function TVSet() {
     )
   }
 
-  if (activeProj === 3) {
+  if (p3Active = true) {
     p1Active = false;
     p2Active = false;
     p3Active = true;
